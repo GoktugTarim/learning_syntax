@@ -29,12 +29,19 @@ for (int i = 0; i < sayi; i++)
     lst.Add(new list_class { dog_name = input_name, dog_age = input_age });
 
 }
-    
-foreach (list_class c in lst)
+
+Console.WriteLine("If you'd like too see the dogs list, please press 1");
+int input_number = int.Parse(Console.ReadLine());
+if(input_number == 1)
+{
+    foreach (list_class c in lst)
     {
         Console.WriteLine($"Dogs name: {c.dog_name}\nDogs age: {c.dog_age}");
         doggy.bark();
     }
-
-
+}
+else
+{
+    Console.WriteLine("Bye!");
+}
 
