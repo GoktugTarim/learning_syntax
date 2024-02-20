@@ -31,8 +31,11 @@ for (int i = 0; i < sayi; i++)
 }
 
 Console.WriteLine("If you'd like too see the dogs list, please press 1");
-int input_number = int.Parse(Console.ReadLine());
-if(input_number == 1)
+
+int number = 1;
+bool success = int.TryParse(Console.ReadLine(), out number);
+
+if(success)
 {
     foreach (list_class c in lst)
     {
